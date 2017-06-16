@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Map Example
+    </title>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbfSBInJ4BG9Q9iqeQKuBX5sKsYt-qMsU"></script>
+<style>
+  #mapcanvas
+  {
+    height: 500px;
+    background-color: #aaaaaa;
+  }
+</style>
+
+
+</script>
+
+  </head>
+  <body>
+    <h1>using google maps</h1>
+    <div id="mapcanvas">
+
+    </div>
+
+    <script>
+      console.log("Hello World");
+      var geocoder=new google.maps.Geocoder();
+      var address="1313 Disneyland Dr, Anaheim, CA 92802";
+      var geocodeOptions= {
+        addresss: address
+      }
+      geocoder.geocode(geocodeOptions, addressCallback);
+
+      function addressCallback(results,status)
+      {
+        console.log("addressCallback")
+        if(status==google.maps.GeocoderStatus.OK)
+        {
+          console.log("ok");
+          var location=results[0].geometry.location;
+
+          var mapDiv=document.getElementById("mapcanvas");
+          var mapOptions = {
+            zoom: 15,
+            center: location,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+
+          map=new google.maps.Map(mapDiv,mapOptions);
+        }
+      }
+  </body>
+
+</html>

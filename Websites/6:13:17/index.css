@@ -1,0 +1,45 @@
+h1
+{
+ color: #0099ff;
+ margin-top: 100px;
+ margin-bottom: 20px;
+padding: 5px;
+background-color: white;
+outline: #00FF00 solid;
+}
+h2
+{
+  color: #ff0000;
+
+}
+html
+{
+    background:#e6e6ff;
+}
+
+video
+{
+  margin-bottom: 50px;
+}
+.header{
+  width:466px;
+}
+.headers
+{
+  color: #000000;
+}
+#twitchtv
+{
+  color: #000000;
+  background: #9966ff;
+}
+#stephen
+{
+  color: #000000;
+  background-color: #ff6600;
+}
+#utube
+{
+  color: #000000;
+  background-color: #ff0000;
+}
